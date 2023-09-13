@@ -5,6 +5,10 @@ import { Carousel } from "react-responsive-carousel";
 
 import footballer from "./assets/images/footballer.png";
 import basketball from "./assets/images/basketball.png";
+import lineBg1 from "./assets/images/line-bg-1.svg";
+import lineBg2 from "./assets/images/line-bg-2.svg";
+import starBg1 from "./assets/images/star-bg-1.png";
+import starBg2 from "./assets/images/star-bg-2.png";
 
 const Container = styled.div`
   font-family: "Roboto", sans-serif;
@@ -129,17 +133,50 @@ const Container = styled.div`
       position: relative;
       padding: 1.1875rem 1.125rem 14.8125rem 1.125rem;
     }
+    .main-player {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+    }
+    .bg {
+      position: absolute;
+      z-index: 1;
+    }
     .footballer-container {
       position: absolute;
+      overflow: hidden;
       width: 100%;
       height: auto;
       max-width: 200px;
       max-height: 281px;
-      z-index: 999;
 
       &.position-mobile {
         top: 24%;
         left: 20%;
+      }
+      .line-bg {
+        width: 70%;
+      }
+      .star-bg {
+        width: 8%;
+      }
+      .pos-lineBg1 {
+        top: 0;
+        right: 10%;
+      }
+      .pos-lineBg2 {
+        top: 40%;
+        left: -28%;
+      }
+      .pos-starBg1 {
+        top: 3%;
+        left: 9%;
+      }
+      .pos-starBg2 {
+        top: 0;
+        left: 0;
       }
     }
     .basketball-container {
@@ -149,11 +186,37 @@ const Container = styled.div`
       height: auto;
       max-width: 302px;
       max-height: 249px;
-      z-index: 999;
 
       &.position-mobile {
         top: 32%;
         left: 1%;
+      }
+
+      .line-bg {
+        width: 42%;
+      }
+      .star-bg {
+        width: 5%;
+      }
+      .pos-lineBg1 {
+        top: 0;
+        left: 55%;
+      }
+      .pos-lineBg2 {
+        bottom: 0;
+        left: 12%;
+      }
+      .pos-starBg1 {
+        top: 3%;
+        left: 20%;
+      }
+      .pos-starBg2 {
+        top: 0;
+        left: 14%;
+      }
+      .pos-starBg3 {
+        top: 62%;
+        right: 6%;
       }
     }
     .is-display-1 {
@@ -493,11 +556,30 @@ function App() {
 
       <div className="is-display-2">
         <div className="article-block-7 bg-white">
-          <img
-            className="footballer-container position-mobile"
-            src={footballer}
-            alt="footballer"
-          />
+          <div class="footballer-container position-mobile">
+            <img class="main-player" src={footballer} alt="footballer" />
+            <img
+              src={lineBg1}
+              alt="lineBg1"
+              className="bg line-bg pos-lineBg1"
+            />
+            <img
+              src={lineBg2}
+              alt="lineBg2"
+              className="bg line-bg pos-lineBg2"
+            />
+            <img
+              src={starBg1}
+              alt="starBg1"
+              className="bg star-bg pos-starBg1"
+            />
+            <img
+              src={starBg2}
+              alt="starBg2"
+              className="bg star-bg pos-starBg2"
+            />
+          </div>
+
           <div className="main-headline mh-1 color-gray-1">ATHLETS</div>
         </div>
         <Carousel
@@ -555,11 +637,34 @@ function App() {
         </Carousel>
 
         <div className="article-block-8 bg-white">
-          <img
-            className="basketball-container position-mobile"
-            src={basketball}
-            alt="basketball"
-          />
+          <div className="basketball-container  position-mobile">
+            <img className="main-player" src={basketball} alt="basketball" />
+            <img
+              src={lineBg1}
+              alt="lineBg1"
+              className="bg line-bg pos-lineBg1"
+            />
+            <img
+              src={lineBg2}
+              alt="lineBg2"
+              className="bg line-bg pos-lineBg2"
+            />
+            <img
+              src={starBg1}
+              alt="starBg1"
+              className="bg star-bg pos-starBg1"
+            />
+            <img
+              src={starBg2}
+              alt="starBg2"
+              className="bg star-bg pos-starBg2"
+            />
+            <img
+              src={starBg1}
+              alt="starBg3"
+              className="bg star-bg pos-starBg3"
+            />
+          </div>
           <div className="main-headline mh-2 color-gray-1">PLAYERS</div>
         </div>
         <Carousel
