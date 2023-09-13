@@ -328,7 +328,7 @@ const Container = styled.div`
         left: -20%;
       }
       .line-bg {
-        width: 60%;
+        width: 50%;
       }
       .star-bg {
         width: 4%;
@@ -337,7 +337,7 @@ const Container = styled.div`
         right: 18%;
       }
       .pos-lineBg2 {
-        left: -26%;
+        left: -18%;
       }
       .pos-starBg1 {
         top: -2%;
@@ -377,6 +377,10 @@ const Container = styled.div`
       .pos-starBg2 {
         top: 14%;
         left: 33%;
+      }
+      .pos-starBg3 {
+        top: 48%;
+        right: 20%;
       }
     }
     .is-display-1 {
@@ -439,16 +443,25 @@ const Container = styled.div`
     }
     .basketball-container {
       &.position-over-mobile {
-        bottom: -68%;
+        top: 15%;
         right: -20%;
       }
     }
   }
   @media (min-width: 1280px) {
     .footballer-container {
+      overflow: hidden;
       &.position-over-mobile {
         top: 2%;
         left: 0%;
+      }
+      .pos-starBg1 {
+        top: 8%;
+        left: 13%;
+      }
+      .pos-starBg2 {
+        top: 6%;
+        left: 8%;
       }
     }
     .basketball-container {
@@ -464,12 +477,27 @@ const Container = styled.div`
       &.position-over-mobile {
         left: 5%;
       }
+      .star-bg {
+        width: 3%;
+      }
     }
     .basketball-container {
       max-width: 991px;
       max-height: 815px;
       &.position-over-mobile {
-        right: -2%;
+        top: 0;
+        right: -10%;
+      }
+      .star-bg {
+        width: 2%;
+      }
+      .pos-starBg1 {
+        top: 15%;
+        left: 28%;
+      }
+      .pos-starBg2 {
+        top: 17%;
+        left: 31%;
       }
     }
   }
