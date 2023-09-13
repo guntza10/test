@@ -8,7 +8,7 @@ import basketball from "./assets/images/basketball.png";
 import lineBg1 from "./assets/images/line-bg-1.svg";
 import lineBg2 from "./assets/images/line-bg-2.svg";
 import starBg1 from "./assets/images/star-bg-1.png";
-import starBg2 from "./assets/images/star-bg-2.png";
+import starBg2 from "./assets/images/star-bg-2.svg";
 
 const Container = styled.div`
   font-family: "Roboto", sans-serif;
@@ -320,19 +320,63 @@ const Container = styled.div`
       padding: 2.75rem 0 4.5rem 0;
     }
     .footballer-container {
+      overflow: visible;
       max-width: 498px;
       max-height: 699px;
       &.position-over-mobile {
         top: 30%;
         left: -20%;
       }
+      .line-bg {
+        width: 60%;
+      }
+      .star-bg {
+        width: 4%;
+      }
+      .pos-lineBg1 {
+        right: 18%;
+      }
+      .pos-lineBg2 {
+        left: -26%;
+      }
+      .pos-starBg1 {
+        top: -2%;
+        left: 43%;
+      }
+      .pos-starBg2 {
+        top: -4%;
+        left: 38%;
+      }
     }
     .basketball-container {
+      overflow: visible;
       max-width: 691px;
       max-height: 568px;
       &.position-over-mobile {
         top: 6%;
         right: -32%;
+      }
+      .line-bg {
+        width: 30%;
+      }
+      .star-bg {
+        width: 3%;
+      }
+      .pos-lineBg1 {
+        top: 7%;
+        left: 66%;
+      }
+      .pos-lineBg2 {
+        top: 37%;
+        left: 25%;
+      }
+      .pos-starBg1 {
+        top: 10%;
+        left: 29%;
+      }
+      .pos-starBg2 {
+        top: 14%;
+        left: 33%;
       }
     }
     .is-display-1 {
@@ -450,11 +494,29 @@ function App() {
     <Container>
       <div className="is-display-1">
         <div className="article-block-1 bg-white">
-          <img
-            className="footballer-container position-over-mobile"
-            src={footballer}
-            alt="footballer"
-          />
+          <div class="footballer-container position-over-mobile">
+            <img class="main-player" src={footballer} alt="footballer" />
+            <img
+              src={lineBg1}
+              alt="lineBg1"
+              className="bg line-bg pos-lineBg1"
+            />
+            <img
+              src={lineBg2}
+              alt="lineBg2"
+              className="bg line-bg pos-lineBg2"
+            />
+            <img
+              src={starBg1}
+              alt="starBg1"
+              className="bg star-bg pos-starBg1"
+            />
+            <img
+              src={starBg2}
+              alt="starBg2"
+              className="bg star-bg pos-starBg2"
+            />
+          </div>
           <div className="container-flex">
             <div className="space-image-top"></div>
             <div className="content-container-top">
@@ -503,11 +565,34 @@ function App() {
           </div>
         </div>
         <div className="article-block-4 bg-white">
-          <img
-            className="basketball-container position-over-mobile"
-            src={basketball}
-            alt="basketball"
-          />
+          <div className="basketball-container position-over-mobile">
+            <img className="main-player" src={basketball} alt="basketball" />
+            <img
+              src={lineBg1}
+              alt="lineBg1"
+              className="bg line-bg pos-lineBg1"
+            />
+            <img
+              src={lineBg2}
+              alt="lineBg2"
+              className="bg line-bg pos-lineBg2"
+            />
+            <img
+              src={starBg1}
+              alt="starBg1"
+              className="bg star-bg pos-starBg1"
+            />
+            <img
+              src={starBg2}
+              alt="starBg2"
+              className="bg star-bg pos-starBg2"
+            />
+            <img
+              src={starBg1}
+              alt="starBg3"
+              className="bg star-bg pos-starBg3"
+            />
+          </div>
           <div className="container-flex">
             <div className="content-container-bottom">
               <div className="main-headline mh-2 color-gray-1">PLAYERS</div>
