@@ -452,7 +452,7 @@ const Container = styled.div`
     .footballer-container {
       overflow: hidden;
       &.position-over-mobile {
-        top: 2%;
+        top: 5%;
         left: 0%;
       }
       .pos-starBg1 {
@@ -504,7 +504,6 @@ const Container = styled.div`
   @media (min-width: 1920px) {
     .footballer-container {
       &.position-over-mobile {
-        top: 0;
         left: 8%;
       }
     }
